@@ -77,7 +77,7 @@ export default function Page() {
       } else {
         setMessage(data.error || 'สมัครสมาชิกไม่สำเร็จ');
       }
-    } catch (error) {
+    } catch {
       setMessage('เกิดข้อผิดพลาดในการสมัครสมาชิก');
     }
   };
