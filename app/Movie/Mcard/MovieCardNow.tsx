@@ -1,6 +1,7 @@
 "use client"; // บอกให้ Next.js รู้ว่านี่คือ Client Component
 
 import React from "react";
+import Image from 'next/image';
 
 interface Movie {
   id: number;
@@ -27,7 +28,7 @@ const MovieCardNow: React.FC<MovieCardNowProps> = ({ movie }) => {
 
   return (
     <div style={styles.movieCard}>
-      <img
+      <Image
         src={movie.posterUrl || "https://via.placeholder.com/200x300?text=No+Image"} // ใช้ fallback image
         alt={`โปสเตอร์ของ ${movie.title}`}
         style={styles.moviePoster}

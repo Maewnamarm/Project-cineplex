@@ -3,12 +3,13 @@
 import React from "react";
 import "./footter.css";
 import { FaFacebook, FaYoutube, FaTwitter } from "react-icons/fa";
+import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
     <div className="footer">
       {/* Footer Logo */}
-      <img
+      <Image
         src="https://i.imgur.com/lgFPDON_d.png?maxwidth=520&shape=thumb&fidelity=high"
         alt="Vestra Cineplex"
         className="footerLogo"

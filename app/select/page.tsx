@@ -4,6 +4,7 @@ import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import "./select.css";
+import Image from 'next/image';
 
 export default function Page() {
   const [selectedRanks, setSelectedRanks] = useState<string[]>([]);
@@ -73,7 +74,7 @@ export default function Page() {
      {/* Movie Poster Section */}
      <div className="posterSection">
         <div className="posterPlaceholder">
-          <img
+          <Image
             src="https://storage-wp.thaipost.net/2024/02/S__25862218_0.jpg"
             alt="Movie Poster"
             className="posterImage"

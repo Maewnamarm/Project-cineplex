@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";  // ใช้ useRouter จาก next/navigation
 import "./navbar.css";  // Import the CSS file
+import Image from 'next/image';
 
 const Navbar: React.FC = () => {
   const [hover, setHover] = useState<string | null>(null);
@@ -115,7 +116,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Hero Image */}
-      <img
+      <Image
         src="https://i.imgur.com/WBQ4BUQ_d.png?maxwidth=520&shape=thumb&fidelity=high"
         alt="Cineplex"
         className="heroImage"

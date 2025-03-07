@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from 'next/image';
 
 interface Movie {
   id: number;
@@ -27,11 +28,10 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, showDelete, onDelete }) =>
   return (
     <div style={styles.movieCard}>
       <div style={styles.imageContainer}>
-        <img
+        <Image
           src={movie.posterUrl}
           alt={`โปสเตอร์ของ ${movie.title}`}
           style={styles.moviePoster}
-          // เอา onClick ที่ทำให้ไปหน้าอื่นออก
         />
         {showDelete && (
           <button

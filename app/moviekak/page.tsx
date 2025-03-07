@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import NavbarAM from '@/components/ForAdmin/NavbarAM';
 import FooterAM from '@/components/ForAdmin/FootterAM';
+import Image from 'next/image';
 
 const MovieForm = () => {
   const [formData, setFormData] = useState({
@@ -80,7 +81,7 @@ const MovieForm = () => {
             <div className="space-y-4 mb-6 flex flex-col items-center">
               <div className="w-64 h-80 bg-gray-700 flex items-center justify-center rounded mb-2">
                 {formData.image_url ? (
-                  <img src={formData.image_url} alt="Selected" className="w-full h-full object-cover rounded" />
+                  <Image src={formData.image_url} alt="Selected" className="w-full h-full object-cover rounded" />
                 ) : (
                   "ใส่ลิงก์รูปภาพ"
                 )}

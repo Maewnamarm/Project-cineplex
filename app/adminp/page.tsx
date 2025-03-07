@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import NavbarAM from '@/components/ForAdmin/NavbarAM';
 import FooterAM from '@/components/ForAdmin/FootterAM';
+import Image from 'next/image';
 
 const MovieForm = () => {
   const [showtimes, setShowtimes] = useState([{ id: 1, time: "" }]);
@@ -37,7 +38,7 @@ const MovieForm = () => {
             <div className="space-y-4 mb-6 flex flex-col items-center">
               <div className="w-64 h-80 bg-gray-700 flex items-center justify-center rounded mb-2">
                 {image ? (
-                  <img
+                  <Image
                     src={URL.createObjectURL(image)}
                     alt="Selected"
                     className="w-full h-full object-cover rounded"
@@ -125,7 +126,7 @@ const MovieForm = () => {
                 ].map((item) => (
                   <div key={item} className="flex items-center space-x-2">
                     <input type="checkbox" className="mr-2 w-6 h-6 border-2 rounded-full border-gray-700 accent-blue-500" />
-                    <img src="https://i.imgur.com/Vfm7Jyr.png" alt={item} className="w-12 h-12" />
+                    <Image src="https://i.imgur.com/Vfm7Jyr.png" alt={item} className="w-12 h-12" />
                     <label>{item}</label>
                   </div>
                 ))}

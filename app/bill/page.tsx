@@ -4,6 +4,7 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import './bill.css';
 import StepProgressBar from "@/components/StepProgressBar";
+import Image from 'next/image';
 
 export default function Page() {
   const [email, setEmail] = useState<string>("");
@@ -53,7 +54,7 @@ export default function Page() {
         {/* Movie Poster Section */}
         <div className="posterSection">
         <div className="posterPlaceholder">
-          <img 
+          <Image 
             src="https://storage-wp.thaipost.net/2024/02/S__25862218_0.jpg" 
             alt="Movie Poster" 
             className="moviePoster"
@@ -96,7 +97,7 @@ export default function Page() {
         <br /><br /><br />
         {isSubmitted && !isPaymentCompleted && (
           <div className="confirmation">
-            <img src="/QR.png" alt="QR Code" />
+            <Image src="/QR.png" alt="QR Code" />
             <button className="finishButton" onClick={handleFinish}>
               เสร็จสิ้น
             </button>

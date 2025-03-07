@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
+import Image from 'next/image';
 
 interface MovieProps {
   id: number;
@@ -25,7 +26,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
 
   return (
     <div style={styles.movieCard}>
-      <img src={movie.posterUrl} alt={movie.title} style={styles.moviePoster} />
+      <Image src={movie.posterUrl} alt={movie.title} style={styles.moviePoster} />
       <div style={styles.movieInfo}>
         <h3>{movie.title}</h3>
         <p>ประเภท: {movie.type}</p>

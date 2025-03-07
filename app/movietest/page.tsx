@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footter from "@/components/Footter";
 import "./new.css";
+import Image from 'next/image';
 
 interface Movie {
   addmoive_id: number;
@@ -55,7 +56,7 @@ export default function MovieList() {
         <div className="movie-grid">
           {movies.map((movie) => (
             <div key={movie.addmoive_id} className="movie-card">
-              <img src={movie.image_url} alt={movie.title} className="movie-image" />
+              <Image src={movie.image_url} alt={movie.title} className="movie-image" />
               <h2>{movie.title}</h2>
               <p><strong>Category:</strong> {movie.category}</p>
               <p><strong>Language:</strong> {movie.language}</p>

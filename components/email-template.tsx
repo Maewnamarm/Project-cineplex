@@ -10,6 +10,7 @@ import {
     Text,
   } from '@react-email/components';
   import * as React from 'react';
+  import Image from 'next/image';
   
   interface GithubAccessTokenEmailProps {
     username?: string;
@@ -24,7 +25,7 @@ import {
       <Body style={main}>
         <Preview>Your OTP Code</Preview>
         <Container style={container}>
-          <Img src={`${baseUrl}/static/github.png`} width="32" height="32" alt="GitHub" />
+          <Image src={`${baseUrl}/static/github.png`} width="32" height="32" alt="GitHub" />
   
           <Text style={title}>
             <strong>@{username}</strong>, here is your OTP code.
@@ -41,7 +42,7 @@ import {
           </Section>
           
           <Text style={footer}>
-            If you didn't request this, please ignore this email.
+            If you didn&apos;t request this, please ignore this email.
           </Text>
         </Container>
       </Body>
