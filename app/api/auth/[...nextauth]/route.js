@@ -4,14 +4,16 @@ import GoogleProvider from "next-auth/providers/google";
 
 console.log("Google Client ID:", process.env.GOOGLE_CLIENT_ID);
 
-const handler = NextAuth({
+export const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
-});
+};
 
-export { handler };
+// ส่งออก NextAuth โดยตรง
+export default NextAuth(authOptions);
+
 
