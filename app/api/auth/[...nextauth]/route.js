@@ -15,5 +15,6 @@ export const authOptions = {
 
 const handler = NextAuth(authOptions);
 
-// สำหรับ Next.js 13+ การส่งออกจะใช้วิธีนี้
-export { handler as GET, handler as POST };
+// ส่งออก handler ตามที่ Next.js 13+ ต้องการ
+export { handler };
+
